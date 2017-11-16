@@ -1,0 +1,81 @@
+
+
+
+
+div.container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	background-color: #FFFFFF;
+	text-align: center;
+}
+
+div.nav {
+	width: 70%;
+	height: 80px;
+	margin: 2% 15%;
+	/*float: left;*/
+	padding-top: 2px;
+	background-color: #cdd1c4;
+	font-family: 'Overpass', sans-serif;
+	font-size: 34px;
+
+}
+
+div.header {
+	width: 70%;
+	height: 140px;
+	margin: 2% 15%;
+	/*float: left;*/
+	padding-top: 2px;
+	background-color: #658e9c;
+	font-family: 'Overpass', sans-serif;
+	font-size: 48px
+
+}
+
+div.side {
+	/*display: block;*/
+	width: 25%;
+	height: 100px;
+	margin: 2% 1% 2% 15%;
+	float: left;
+	/*clear: both;*/	
+	background-color: #30323d;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+
+}
+
+
+div.willItWork { 
+	/*display: inline-block;*/
+	width: 40%;
+	height: 100px;
+	margin: 2% 15% 2% 1%;
+	float: right;
+	/*clear: both;*/
+	background-color: #4d5061;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	
+}
+
+div.footer {	
+	width: 70%;
+	height: 200px;
+	margin: 2% 15%;
+	float: right;
+	clear: both;
+	background-color: #727072;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+
+
+}
+
+
+
+
+

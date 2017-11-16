@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Book with Us</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+39+Extended+Text" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+      .barcode {
+            font-family: 'Libre Barcode 39 Extended Text', cursive;
+            font-size: 40px;
+            text-justify: center;
+            text-align: center;
+          }
+      .h4center {
+               text-align: center;
+               text-justify: center;
+               margin-bottom:0px;
+           }   
+           
+      .container {
+             margin-left: auto;
+	           margin-right: auto;
+	           width: 100%;
+	           background-color: #FFFFFF;
+	           text-align: center;
+           } 
+      .h4variable {
+            color: #faf0f0;
+            font-weight: bold;
+  }   
+      .modal-header {
+          background-color: #E0E0E0;
+  }
+  
+  img {
+    height: 200px;
+    width: 400px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+    </style>
+  </head>
+  <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  	<a class="navbar-brand" href="#">Hotel 7</a>
+  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  	</button>
+  	<div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="maps.html">Find Us!<span class="sr-only">(current)</span></a>
+      </li>
+            <li class="nav-item active">
+        <a class="nav-link" href="booking.html">Book Us!<span class="sr-only">(current)</span></a>
+      </li>
+ <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Reviews
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="index.html#reviews">Read A Review</a>
+          <a class="dropdown-item" href="writeAReview.html">Write A Review</a>
+    </ul>
+  	</div>
+	</nav>
+	
+	 <div class="alert alert-danger" role="alert">
+  	Important Note: Hotel 7 is not a real location, and camping in Central Park is frowned upon.
+    </div>
+    
+    <br><br><br><br>
+    <div class="container">
+       <h1 class="display-3">Hotel 7</h1>
+       <img src = "Images/hotel_fineDining.jpg"/>
+    </div>
+    <br><br>
+    <div class="container">
+       <h4>Nightly Rate: $299.00</h4> 
+       <br>
+  
+   <h3>
+    <table>
+        <tbody>
+            <tr><td><label for="name">Guest Name:</label></td><td><input id="name-1" type="text"></td></tr>
+            <tr><td><label for="nights">Number of Nights:</label></td><td><input id="input-1" type = "number"></td></tr>
+            <tr><td><label for="arrival">Arrival Date:</label></td><td><input id="arrival-1" type="date"></td></tr>
+        </tbody>
+    </table>
+    <br>
+     <button class="btn btn-primary" onclick="calculateTotal()" data-toggle="modal" data-target="#exampleModal">
+     Confirm Booking
+    </button>
+  </h3>
+    <div>
+<br><br><br>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Hotel 7 Booking Confirmation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <div class="container">
+        <table>
+            <tbody>
+        <h1 class="display-3">Hotel 7</h1> 
+        <h4>1234 East Great Lawn</h4>
+        <h4>New York NY 11111</h4>
+        <br>
+        <h4 class="h4center">Confirmation # CYAMMWQH</h4>
+        <h1 class="barcode">CYAMMWQH</h1>
+        <br>
+        <img src = "Images/hotel_room.jpeg"/>
+        <tr><td><h4>Guest Name:</h4></td><td><h5 class="h4variable"><span id="answr1"></span></td></tr></h5>
+        <br>
+        <tr><td><h4>Arrival Date:</h4></td><td><h5 class="h4variable"><span id="answr3"></span></td></h5></tr>
+        <br>
+        <tr><td><h4>Number of Nights:</h4></td><td><h5 class="h4variable"><span id="answr2"></span></td></tr></h5>
+        <br>
+        <tr><td><h4>Room Charges:</h4></td><td><h5 class="h4variable">$<span id="answer"></span></td></h5></tr>
+        <br>
+        <tr><td><h4>Tax & Surcharge (18%):</h4></td><td><h5 class="h4variable">$<span id ="answrs"></span></td></h5></tr>
+        <br>
+        <tr><td><h4>Total Stay:</h4></td><td><h5 class="h4variable">$<span id="answr4"></span></td></h5></tr>
+        </tbody>
+        </table>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">Start Over</button>          
+        <button type="button" class="btn btn-success" onclick="printThis()" data-dismiss="modal">Print</button>
+        <button type="button" class="btn btn-danger" onclick="close_window()" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>  
+
+  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script>
+    function calculateTotal() {
+            var number1 = $("#input-1").val()
+            var result = number1 * 299
+            result = result.toFixed(2)
+            $("#answer").text(result)
+            var nameline = $("#name-1").val()
+            $("#answr1").text(nameline)
+            var nights = $("#input-1").val()
+            $("#answr2").text(nights)
+            var arrival = $("#arrival-1").val()
+            $("#answr3").text(arrival)
+            var surcharge = (result * 18)/100
+            surcharge = surcharge.toFixed(2) 
+            $("#answrs").text(surcharge)
+            var totalcost = +result + +surcharge
+            totalcost = totalcost.toFixed(2)
+            $("#answr4").text(totalcost)
+        }
+        
+    function close_window() {
+        window.close();
+    }  
+    
+    function printThis() {
+        window.print();
+    }
+    
+    </script>
+  </body>
+</html>
